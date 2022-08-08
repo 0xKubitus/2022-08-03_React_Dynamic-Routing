@@ -4,6 +4,11 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
+
+import Home from "pages/Home";
+import About from "pages/About";
+import Documentation from "pages/Documentation";
+
 import './App.css';
 
 function App() {
