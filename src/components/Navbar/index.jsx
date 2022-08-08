@@ -7,6 +7,7 @@ const Navbar = () => {
   return (
     <nav>
       <Routes>
+        <Route path="/" element={<Book />} />
         <Route path="/book/:bookSlug" element={<Book />} />
       </Routes>
     </nav>

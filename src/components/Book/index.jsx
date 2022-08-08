@@ -6,20 +6,26 @@ import books from '../../data/books';
 
 const Book = () => {
   const { bookSlug } = useParams();
-
   // Par défaut, j'indique que nous n'avons pas de livre sélectionné. 
   const [currentBook, setCurrentBook] = useState(undefined);
 
   // Dès que le composant est monté ou que l'URL change, j'appelle setCurrentBook en lui passant le livre, grâce au useEffect().
   useEffect(() => {
     const foundBook = books.find((book) => book.slug === bookSlug);
+    console.log(foundBook)
     setCurrentBook(foundBook);
   }, [bookSlug])
 
-// Si currentBook n'est pas undefined, alors je retourne le contenu du livre. 
-// Sinon, je retourne un paragraphe d'erreur.
 
-  //const bookContent = currentBook !=== undefined ? 
+  const bookContent = (book) => {
+    return (
+      <div className="real-book-content">
+        <p id="book-title"><b><u>{book.title}</u></b>, {book.author}</p>
+        <p id="book-desc">{book.description}</p>
+        Should be empty (or not exist at all???) until a link has been clicked.
+      </div>
+    )
+  }
 
 // Alors, si currentBook contient bien un livre, je renvoie toutes ses informations. Sinon je mets un message d'erreur. Cela nous permet par exemple de ne pas avoir de bug, dans le cas où l'utilisateur rentrerait lui-même une URL personnalisée.
 
@@ -40,8 +46,7 @@ const Book = () => {
       <div className="booklinks">{booksLinks}</div>
 
       <div className="book-content">
-        <p id="book-title"><b><u>titre</u></b>, auteur</p>
-        <p id="book-desc">description</p>
+        {currentBook ? bookContent(currentBook) : console.log("erreur")}
       </div>
     </div>
   )
