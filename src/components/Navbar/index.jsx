@@ -1,22 +1,15 @@
-import books from '../../data/books'
-
-
-const booksLinks = books.map( (book) => {
-  return (
-    <li className="navbar-links">{book.slug}</li>
-  )
-})
+import Book from 'components/Book';
 
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <ul id="navbar-ul">
-        {booksLinks}
+        <Book />
       </ul>
     </nav>
-  )     
-}
+  );     
+};
 
 
-export default Navbar
+export default Navbar;
