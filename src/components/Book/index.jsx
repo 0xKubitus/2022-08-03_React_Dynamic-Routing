@@ -1,10 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; 
+import React, { useState, useEffect, } from 'react';
+import { useParams, Link, } from 'react-router-dom'; 
 
 import books from '../../data/books';
 
 
 const Book = () => {
+  const { bookSlug } = useParams();
+  const [currentBook, setCurrentBook] = useState(undefined);
+
+  useEffect(() => {
+    const foundBook = books.find((book) => book.slug === bookSlug);
+    setCurrentBook(foundBook);
+  }, [bookSlug])
+
   const booksLinks = books.map( (book) => {  
     return (
       <li className="navbar-links" key={book.slug}>
@@ -15,7 +23,13 @@ const Book = () => {
     );
   });
 
-  return booksLinks
+
+  
+  return (
+    <div>
+      <h3>{booksLinks}</h3>
+    </div>
+  )
 };
 
 

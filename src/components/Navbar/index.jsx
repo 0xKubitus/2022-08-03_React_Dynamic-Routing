@@ -1,12 +1,14 @@
+import { Routes, Route } from "react-router-dom";
+
 import Book from 'components/Book';
 
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <ul id="navbar-ul">
-        <Book />
-      </ul>
+    <nav>
+      <Routes>
+        <Route path="/book/:bookSlug" element={<Book />} />
+      </Routes>
     </nav>
   );     
 };
