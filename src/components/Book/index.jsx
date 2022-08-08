@@ -26,8 +26,8 @@ const Book = () => {
 
   
   return (
-    <div>
-      <h3>{booksLinks}</h3>
+    <div className="booklinks-main">
+      <div className="booklinks-sub">{booksLinks}</div>
     </div>
   )
 };

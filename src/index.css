@@ -1,13 +1,22 @@
-#navbar-ul {
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+.booklinks-main {
+  border: 2px solid blue;
+  margin: 10px;
+  padding: 10px;
+}
+
+.booklinks-sub {
+  border: 2px solid red;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-
   list-style-type: none;
-  margin: 15px auto 40px auto;
-  padding-left: 0;
+  font-size: 23px;
+  font-weight: 700;
 }
 
-.navbar-links {
-  font-size: 24px;
-}
+
+
