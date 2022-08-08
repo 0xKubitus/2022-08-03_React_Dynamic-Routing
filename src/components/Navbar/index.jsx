@@ -3,7 +3,7 @@ import books from '../../data/books'
 
 const booksLinks = books.map( (book) => {
   return (
-    <li>{book.slug}</li>
+    <li className="navbar-links">{book.slug}</li>
   )
 })
 
@@ -11,7 +11,7 @@ const booksLinks = books.map( (book) => {
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <ul>
+      <ul id="navbar-ul">
         {booksLinks}
       </ul>
     </nav>
