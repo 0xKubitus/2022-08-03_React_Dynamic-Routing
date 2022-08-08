@@ -12,7 +12,7 @@ const Book = () => {
   // Dès que le composant est monté ou que l'URL change, j'appelle setCurrentBook en lui passant le livre, grâce au useEffect().
   useEffect(() => {
     const foundBook = books.find((book) => book.slug === bookSlug);
-    console.log(foundBook)
+    //console.log(foundBook)
     setCurrentBook(foundBook);
   }, [bookSlug])
 
@@ -22,12 +22,9 @@ const Book = () => {
       <div className="real-book-content">
         <p id="book-title"><b><u>{book.title}</u></b>, {book.author}</p>
         <p id="book-desc">{book.description}</p>
-        Should be empty (or not exist at all???) until a link has been clicked.
       </div>
     )
   }
-
-// Alors, si currentBook contient bien un livre, je renvoie toutes ses informations. Sinon je mets un message d'erreur. Cela nous permet par exemple de ne pas avoir de bug, dans le cas où l'utilisateur rentrerait lui-même une URL personnalisée.
 
 
   const booksLinks = books.map( (book) => {  
