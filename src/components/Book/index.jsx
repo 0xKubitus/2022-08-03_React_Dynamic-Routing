@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 
 import books from '../../data/books';
 
@@ -7,7 +8,9 @@ const Book = () => {
   const booksLinks = books.map( (book) => {  
     return (
       <li className="navbar-links" key={book.slug}>
-        <a href="#">{book.title}</a> 
+        <Link to={`/book/${book.slug}`}>
+          {book.title}
+        </Link> 
       </li>
     );
   });
