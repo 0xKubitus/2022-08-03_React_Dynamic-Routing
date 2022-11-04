@@ -9,23 +9,17 @@
   
   #### How to manage the content of a page according to its URL?
   
-  
-  
   ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
   ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
   
   </div>
   
-  
-</br>
 </br>
   
  versions:
   
       "react": "^18.2.0"
       "react-router-dom": "^6.3.0"
-
-
 
 </br>
 </br>
@@ -40,18 +34,36 @@ Don't hesitate paying a visit to <a href="https://v5.reactrouter.com/web/guides/
 
 <br/>
 <hr/>
+<br/>
 
-## Tutorial introduction
+## How to use this repo:
+I suggest that you follow along the below tutorial but I also invite you to take a look at my 'demo'.
+
+For that, simply clone this repo on your machine, then open it in a Terminal window.
+Then you can copy and paste the following commands:
+```
+npm i
+npm start
+```
+That's it! This will open my 'demo' in your browser! :wink:
+
+<br/>
+<hr/>
+<br/>
+
+# Tutorial 
+
+<br/>
+
+### Intro
 
 Let's imagine we have a `Book` component.  
 This one would search in an API, based on the URL.  
 If the URL is, for example, www.mondomaine.fr/book/le-club-des-incorrigibles-optimistes, we want to display the book "Le club des incorrigibles optimistes".
 
 
-
 <br/>
 <br/>
-
 
 <details>
 <summary>
@@ -103,7 +115,6 @@ To indicate to your `Route` that my URL will be dynamic (and that I will have to
   </Routes>
 ```
 
-
 In my Book component, I will have to retrieve this part of the URL, and its content. For that, I will use the `useParams()` hook provided by `react-router-dom`.
 
 This hook returns an object that contains the parameters of the browser's current URL. Used as below in my component, it will allow me to retrieve the content of the `bookSlug` parameter from the URL:
@@ -140,37 +151,3 @@ So, if `currentBook` does contain a book, I return all of its information. Other
 This is called a dynamic router.
 
 </details>
-
-
-<hr/>
-<br/>
-
-## How to use this repo:
-I suggest that you follow along the above tutorial but I also invite you to take a look at my 'demo'.
-
-For that, simply clone this repo on your machine, then open it in a Terminal window.
-Then you can copy and paste the following commands:
-```
-npm i
-npm start
-```
-That's it! This will open my 'demo' in your browser! :wink:
-
-</br>
-</br>
-</br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
