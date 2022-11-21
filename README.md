@@ -3,8 +3,6 @@
   [![THP Badge](https://github.com/0xKubitus/Usefull-Stuff-for-README/blob/main/assets/mkdwn-badges/the-hacking-project.svg
   )](https://www.thehackingproject.org/)
 
-  #### August 3rd 2022
-
   # Dynamic Routing with React
   
   #### How to manage the content of a page according to its URL?
