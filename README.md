@@ -120,7 +120,6 @@ This hook returns an object that contains the parameters of the browser's curren
 const { bookSlug } = useParams();
 ```
 
-
 Now, if you display this variable in your component, when you click on the different links of our Navbar, you should see the text of your page change, recovering the slug.
 
 Next step: depending on our slug, we will have to fetch the book with the correct slug. If this book exists, then we return the book information, otherwise we display an error message.
